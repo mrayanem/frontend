@@ -9,21 +9,40 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "babel-plugin-styled-components": "latest",
+    "babel-plugin-inline-react-svg": "latest",
+    "bootstrap": "^5.3.0",
+    "bootstrap-icons": "^1.10.5",
     "next": "latest",
+    "next-images": "latest",
     "react": "latest",
     "react-dom": "latest",
     "sass": "^1.68.0"
   },
   "devDependencies": {
     "@iconify/react": "^4.1.1",
+    "@next/font": "^13.4.8",
+    "@types/dotenv": "latest",
     "@types/node": "latest",
     "@types/react": "latest",
+    "@types/styled-components": "^5.1.2",
+    "@typescript-eslint/eslint-plugin": "^6.4.1",
+    "@typescript-eslint/parser": "^6.4.1",
     "@types/react-dom": "latest",
     "autoprefixer": "latest",
     "eslint": "latest",
     "eslint-config-next": "latest",
+    "eslint-config-prettier": "latest",
+    "eslint-config-standard": "latest",
+    "eslint-plugin-import": "latest",
+    "eslint-plugin-node": "latest",
+    "eslint-plugin-prettier": "latest",
+    "eslint-plugin-promise": "latest",
+    "eslint-plugin-react": "latest",
+    "eslint-plugin-standard": "latest",
     "postcss": "latest",
     "tailwindcss": "latest",
+    "prettier": "^3.0.2",
     "typescript": "latest"
   }
 }
