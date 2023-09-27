@@ -1,6 +1,6 @@
-import Head from 'next/head'
-import styles from '../../styles/Home.module.scss'
-import  { Input } from '../components/ui/Input'
+import Head from 'next/head';
+import styles from '../../styles/Home.module.scss';
+import  { Input } from '../components/ui/Input';
 import { Icon } from '@iconify/react';
 
 export default function Home(){
