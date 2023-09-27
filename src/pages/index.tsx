@@ -1,7 +1,15 @@
 import React from 'react'
+import Head from 'next/head';
+import styles from '../../styles/Home.module.scss';
 
-const Test: React.FC = () => {
+const Login: React.FC = () => {
   return (
+    <>
+
+    <Head>
+    <title>Les Pattes - Login</title>
+   </Head>
+
     <div className='container d-flex justify-content-center align-items-center w-100 h-100'>
       <div className='card p-5 w-100 h-auto'>
         <div className='card-body d-grid justify-content-center'>
@@ -13,7 +21,7 @@ const Test: React.FC = () => {
           <div>
             <div className='row'>
               <div className='col'>
-                <input className='form-control p-2' placeholder='&#xF007;   nome' style={{fontFamily: 'Poppins, FontAwesome'}} />
+                <input className='form-control p-2' placeholder='&#xf007;   nome' style={{fontFamily: 'Arial, FontAwesome'}} />
               </div>
                 <div className="col">
                   <input type="text" className="form-control p-2" placeholder="nome"/>
@@ -55,8 +63,9 @@ const Test: React.FC = () => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 
 
-export default Test
+export default Login
