@@ -4,6 +4,7 @@ import Head from 'next/head';
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-icons/font/bootstrap-icons.css'
+import { GlobalStyle } from '../../styles/global';
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   useEffect(() => {
@@ -12,6 +13,7 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
 
   return (
     <>
+      <GlobalStyle />
       <Head>
         <link
           rel="stylesheet"
