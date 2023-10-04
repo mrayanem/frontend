@@ -9,6 +9,5 @@ export const Input = ({...rest}: InputProps ) => {
     <>
       <TagInput {...rest} />
     </>
-
   )
 }
