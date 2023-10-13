@@ -1,8 +1,25 @@
-.container{
-  color: red;
+@import 'variables';
 
-  h1{
-    font-size: 100px;
-    color: blue;
+.title {
+  text-align: center;
+  & h1{
+      font-size: 2rem;
+      font-weight: bold;
+      color: $blue3;
   }
+  & h6{
+    color: $gray4;
+    font-weight: 500;
+  }
+}
+
+
+.container{
+  border-radius: 10%;
+  border: none;
+}
+
+
+#__next{
+  background-color: $gray1;
 }

@@ -1,15 +1,16 @@
 import { Input } from '@components/Input'
 import React from 'react'
+import styles from '@styles/Home.module.scss'
 
 const Cadastro: React.FC = () => {
   return (
     <>
-    <div className='container h-100'>
+    <div className={styles.container}>
       <div className='card p-5 border-0'>
         <div className='card-body d-grid justify-content-center'>
-          <div className='row mb-4 text-center'>
+          <div className={styles.title}>
             <h1>Cadastre-se</h1>
-            <h2>Necessitamos dos seus dados para prosseguir</h2>
+            <h6>Necessitamos dos seus dados para prosseguir</h6>
           </div>
 
           <div className='p-4'>
