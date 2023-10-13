@@ -3,6 +3,9 @@
 require('dotenv').config();
 
 const nextConfig = {
+    experimental: {
+      forceSwcTransforms: true,
+    },
     headers: () => [{
       source: '/:path*',
       headers: [

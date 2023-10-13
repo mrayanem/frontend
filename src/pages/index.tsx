@@ -1,15 +1,10 @@
+import { Input } from '@components/Input'
 import React from 'react'
-import { Input } from '../components/Input';
-
 
 const Cadastro: React.FC = () => {
   return (
     <>
-    <head>
-      <title>Les Pattes - Login</title>
-   </head>
-
-    <div className='container d-flex justify-content-center align-items-center'>
+    <div className='container h-100'>
       <div className='card p-5 border-0'>
         <div className='card-body d-grid justify-content-center'>
           <div className='row mb-4 text-center'>
@@ -17,7 +12,7 @@ const Cadastro: React.FC = () => {
             <h2>Necessitamos dos seus dados para prosseguir</h2>
           </div>
 
-          <div className='w-75'>
+          <div className='p-4'>
             <div className='row'>
               <div className='col'>
                 <Input className='form-control p-3' placeholder='&#xf4ff; nome'/>
