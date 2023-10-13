@@ -10,14 +10,11 @@
   font-family: 'Poppins', 'FontAwesome';
 }
 
-body {
+body,
+#__next {
   margin: 0;
   padding: 0;
   width: 100vw;
-  height: 100vh;
-}
-
-#__next {
   height: 100vh;
 }
 
