@@ -1,10 +1,9 @@
 import React, { useEffect } from 'react'
 import { AppProps } from 'next/app'
-import Head from 'next/head';
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-icons/font/bootstrap-icons.css'
-import { GlobalStyle } from '../../styles/global';
+import '../styles/global.scss'
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   useEffect(() => {
@@ -13,8 +12,7 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
 
   return (
     <>
-      <GlobalStyle />
-      <Head>
+      <head>
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -22,7 +20,7 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
           crossOrigin="anonymous"
           referrerPolicy="no-referrer"
         />
-      </Head>
+      </head>
       <Component {...pageProps} />
     </>
   );

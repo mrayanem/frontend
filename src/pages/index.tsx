@@ -1,23 +1,21 @@
 import React from 'react'
-import Head from 'next/head';
 import { Input } from '../components/Input';
-import { Title } from '@/components/Login/styles';
-import { Container } from '@/components/Login/styles';
 
-const Login: React.FC = () => {
+
+const Cadastro: React.FC = () => {
   return (
     <>
-    <Head>
-    <title>Les Pattes - Login</title>
-   </Head>
+    <head>
+      <title>Les Pattes - Login</title>
+   </head>
 
-    <Container className='container d-flex justify-content-center align-items-center'>
+    <div className='container d-flex justify-content-center align-items-center'>
       <div className='card p-5 border-0'>
         <div className='card-body d-grid justify-content-center'>
-          <Title className='row mb-4 text-center'>
+          <div className='row mb-4 text-center'>
             <h1>Cadastre-se</h1>
             <h2>Necessitamos dos seus dados para prosseguir</h2>
-          </Title>
+          </div>
 
           <div className='w-75'>
             <div className='row'>
@@ -63,10 +61,10 @@ const Login: React.FC = () => {
 
         </div>
       </div>
-    </Container>
+    </div>
     </>
   )
 }
 
 
-export default Login
+export default Cadastro
