@@ -5,7 +5,7 @@ import React from 'react'
 const Cadastro: React.FC = () => {
   return (
     <>
-    <div className='h-100 d-flex justify-content-center align-items-center'>
+    <div className='d-flex justify-content-center align-items-center'>
       <div className='card p-5 border-0'>
         <div className='card-body d-grid justify-content-center'>
           <div className={styles.title}>
