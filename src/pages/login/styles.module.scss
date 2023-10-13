@@ -1,0 +1,48 @@
+@import '../../styles/variables';
+
+.firstCard {
+  text-align: center;
+  border-radius: 1rem 0 0 1rem;
+  .title {
+    & h1{
+        font-size: 2rem;
+        font-weight: bold;
+        color: $black;
+    }
+    & h6{
+      color: $gray6;
+      font-weight: 600;
+    }
+  }
+}
+
+
+
+.secondCard  {
+  text-align: center;
+  .title{
+    h1{
+        font-size: 2rem;
+        font-weight: bold;
+        color: $blue3;
+    }
+    h6{
+      color: $gray4;
+      font-weight: 500;
+    }
+  }
+
+  .forgotPass {
+    font-weight: 500;
+  }
+}
+
+.container{
+  background-color: $gray1;
+}
+
+
+.firstCard {
+  background-color: $blue1;
+}
+

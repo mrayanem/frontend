@@ -1,12 +1,12 @@
 import { Input } from '@components/Input'
-import styles from '@styles/Home.module.scss'
 import React from 'react'
+import styles from './styles.module.scss'
 
 const Cadastro: React.FC = () => {
   return (
     <>
-    <div className='h-100 d-flex justify-content-center align-items-center'>
-      <div className='card p-5 border-0'>
+    <div className={'h-100 d-flex justify-content-center align-items-center ' + styles.container}>
+      <div className='card w-75 border-0 rounded-4 p-2' style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
         <div className='card-body d-grid justify-content-center'>
           <div className={styles.title}>
             <h1>Cadastre-se</h1>
@@ -16,37 +16,37 @@ const Cadastro: React.FC = () => {
           <div className='p-4'>
             <div className='row'>
               <div className='col'>
-                <Input className='form-control p-3' placeholder='&#xf4ff;   nome'/>
+                <Input placeholder='&#xf4ff;   nome'/>
               </div>
                 <div className="col">
-                  <Input type="text" className="form-control p-3" placeholder='&#xf095;   telefone'/>
+                  <Input placeholder='&#xf095;   telefone'/>
                 </div>
             </div>
 
             <div className='row mt-3'>
               <div className='col'>
-                <Input className='form-control p-3' placeholder='&#xf015;   cep' />
+                <Input placeholder='&#xf015;   cep' />
               </div>
               <div className='col'>
-                <Input className='form-control p-3' placeholder='&#xf007;   cpf' />
-              </div>
-            </div>
-
-            <div className='row mt-3'>
-              <div className='col'>
-                <Input className='form-control p-3' placeholder='&#xf0e0;   e-mail' />
+                <Input placeholder='&#xf007;   cpf' />
               </div>
             </div>
 
             <div className='row mt-3'>
               <div className='col'>
-                <Input className='form-control p-3' placeholder='&#xf023;   senha' />
+                <Input placeholder='&#xf0e0;   e-mail' />
               </div>
             </div>
 
             <div className='row mt-3'>
               <div className='col'>
-                <Input className='form-control p-3' placeholder='&#xf023;   confirmar senha' />
+                <Input placeholder='&#xf023;   senha' />
+              </div>
+            </div>
+
+            <div className='row mt-3'>
+              <div className='col'>
+                <Input placeholder='&#xf023;   confirmar senha' />
               </div>
             </div>
 
