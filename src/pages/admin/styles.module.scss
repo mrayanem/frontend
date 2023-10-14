@@ -1,0 +1,56 @@
+.homeContainer {
+  margin-top: 20px;
+  padding: 0 90px;
+}
+
+.addContainer {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px #58585897 solid;
+  border-radius: 5px;
+}
+
+.formInputs {
+  border: 1px solid #58585897;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.table {
+  width: 100%;
+  color: #535353;
+  border: 1px solid #58585897;
+  max-width: 800px;
+  margin-top: 20px;
+  border-spacing: 0;
+  border-radius: 5px;
+}
+
+.thead {
+  display: flex;
+  border-radius: 5px 5px 0px 0px;
+  background-color: #86b6c6;
+}
+
+.th{
+  width: 120px;
+  text-align: start;
+  padding: 10px;
+}
+
+.tr{
+  display: inline-flex;
+}
+
+.td{
+  display: flex;
+  gap: 10px;
+  width: 120px;
+  text-align: start;
+  padding: 10px;
+}
