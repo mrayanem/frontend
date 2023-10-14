@@ -1,7 +1,5 @@
-import PropTypes from "prop-types";
-import logo from "../assets/logo.svg";
-import styles from "./styles.module.css";
 import { SignOut } from "@phosphor-icons/react";
+import styles from "./styles.module.css";
 
 export function HeaderAdmin() {
   return (
@@ -9,7 +7,7 @@ export function HeaderAdmin() {
       <nav className={styles.navAdmin}>
         <div>
           <a href="#">
-            <img src={logo} alt="Les Pattes" className={styles.logo} />
+            <img src='logo.svg' alt="Les Pattes" className={styles.logo} />
           </a>
         </div>
         <div className={styles.header}>

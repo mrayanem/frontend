@@ -1,6 +1,6 @@
+import { Footer } from "@components/Footer";
 import { HeaderClient } from "@components/HeaderClient/index";
 import { ProdCard } from "@components/ProdCard";
-import { Footer } from "@components/Footer";
 import { CaretRight } from "@phosphor-icons/react";
 import styles from './styles.module.scss';
 

@@ -1,6 +1,5 @@
-import styles from "./styles.module.scss";
-import logo from "../../assets/logo.svg";
 import { ShoppingCartSimple, User } from "@phosphor-icons/react";
+import styles from "./styles.module.scss";
 
 export function HeaderClient() {
   return (
@@ -8,7 +7,7 @@ export function HeaderClient() {
       <nav className={styles.navClient}>
         <div>
           <a href="#">
-            <img src={logo} alt="Les Pattes" className={styles.logo} />
+            <img src='/logo.svg' alt="Les Pattes" className={styles.logo} />
           </a>
         </div>
         <div className={styles.headerClient}>

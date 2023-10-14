@@ -1,5 +1,4 @@
 import styles from "./styles.module.scss";
-import logo2 from "../../assets/logo2.svg";
 
 export function Footer(props:any) {
   return (
@@ -10,7 +9,7 @@ export function Footer(props:any) {
             <a href="#">Política de Privacidade</a>
           </div>
           <a href="#">
-            <img src={logo2} alt="Les Pattes" className={styles.logo} />
+            <img src='/logo.svg' alt="Les Pattes" className={styles.logo} />
           </a>
           <div className={styles.detailFooter}>
             <a href="#">Sobre Nós</a>
