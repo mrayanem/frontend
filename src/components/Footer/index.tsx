@@ -1,6 +1,10 @@
+import { InputHTMLAttributes } from "react";
 import styles from "./styles.module.scss";
 
-export function Footer(props:any) {
+interface FooterProps extends InputHTMLAttributes<HTMLDivElement>{
+}
+
+export function Footer({ }: FooterProps) {
   return (
     <>
       <footer>

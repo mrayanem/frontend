@@ -1,5 +1,9 @@
-import styles from "../styles/button.module.css";
+import { InputHTMLAttributes } from "react";
 
-export function Button(props:any) {
-  return <button>{props.title}</button>;
+interface ButtonProps extends InputHTMLAttributes<HTMLButtonElement>{
+  title: string;
+}
+
+export function Button({ title } : ButtonProps) {
+  return <button>{title}</button>;
 }
