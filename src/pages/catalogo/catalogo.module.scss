@@ -1,0 +1,14 @@
+.containerCard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.categoriaTitulo {
+  display: flex;
+  align-items: center;
+  word-spacing: 5px;
+  margin: 40px 0px 0px 40px;
+  font-size: 16px;
+  font-weight: 600;
+}

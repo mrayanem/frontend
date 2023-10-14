@@ -1,4 +1,4 @@
-import styles from "../styles/cardButton.module.css";
+import styles from "./styles.module.scss";
 
 export function CardButton(props:any) {
   return (

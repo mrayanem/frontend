@@ -1,0 +1,16 @@
+.baseFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20vh;
+  background-color: #b7d9e2;
+  margin-top: 2%;
+}
+
+.detailFooter a {
+  text-decoration: none;
+  color: #585858;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 10px;
+}

@@ -1,0 +1,19 @@
+.btnProduto {
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  background-color: #86b6c6;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.botao {
+  margin-top: 15px;
+  padding-top: 10px;
+  height: 50px;
+  transition: all 0.2s ease-in-out;
+}
+.botao:hover {
+  transform: scale(1.1);
+}

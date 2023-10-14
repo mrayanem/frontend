@@ -5,13 +5,8 @@ import styles from './styles.module.scss'
 const Cadastro: React.FC = () => {
   return (
     <>
-<<<<<<< HEAD:src/pages/index.tsx
-    <div className='d-flex justify-content-center align-items-center'>
-      <div className='card p-5 border-0'>
-=======
     <div className={'h-100 d-flex justify-content-center align-items-center ' + styles.container}>
       <div className='card w-75 border-0 rounded-4 p-2' style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
->>>>>>> e4eaa03945c43e43f86b4b8c72e7fdde281763d2:src/pages/cadastro/index.tsx
         <div className='card-body d-grid justify-content-center'>
           <div className={styles.title}>
             <h1>Cadastre-se</h1>
