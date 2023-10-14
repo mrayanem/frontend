@@ -1,5 +1,5 @@
 import styles from "./styles.module.scss";
-import logo2 from "../assets/logo2.svg";
+import logo2 from "../../assets/logo2.svg";
 
 export function Footer(props:any) {
   return (

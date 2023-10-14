@@ -1,11 +1,10 @@
 import { HeaderClient } from "@components/HeaderClient/index";
-import { HeaderAdmin } from "@components/HeaderAdmin/index";
 import { ProdCard } from "@components/ProdCard";
 import { Footer } from "@components/Footer";
 import { CaretRight } from "@phosphor-icons/react";
-import styles from "../styles/catalogo.module.css";
+import styles from './styles.module.scss';
 
-export function Catalogo() {
+const Catalogo: React.FC = () =>{
   return (
     <>
       <HeaderClient />
@@ -60,3 +59,5 @@ export function Catalogo() {
     </>
   );
 }
+
+export default Catalogo

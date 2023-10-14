@@ -1,5 +1,5 @@
-import styles from "./styles.module.css";
-import logo from "../assets/logo.svg";
+import styles from "./styles.module.scss";
+import logo from "../../assets/logo.svg";
 import { ShoppingCartSimple, User } from "@phosphor-icons/react";
 
 export function HeaderClient() {
