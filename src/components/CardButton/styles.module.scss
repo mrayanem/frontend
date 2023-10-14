@@ -1,8 +1,10 @@
+@import '../../styles/variables';
+
 .btnProduto {
   text-decoration: none;
   cursor: pointer;
   border: none;
-  background-color: #86b6c6;
+  background-color: $blue2;
   color: white;
   padding: 10px;
   border-radius: 5px;

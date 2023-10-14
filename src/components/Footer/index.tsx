@@ -13,7 +13,7 @@ export function Footer(props:any) {
             <img src={logo2} alt="Les Pattes" className={styles.logo} />
           </a>
           <div className={styles.detailFooter}>
-            <a href="#">{props.title}</a>
+            <a href="#">Sobre Nós</a>
           </div>
         </div>
       </footer>

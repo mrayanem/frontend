@@ -4,7 +4,7 @@
   align-items: center;
   color: #202020;
   border-bottom: #86b6c6 3px solid;
-  padding: 10px 20px;
+  padding: 15px 20px;
 }
 
 .headeClient {
@@ -19,21 +19,26 @@
   text-decoration: none;
 }
 
-.accLinks a {
+.accLinks {
+  display: flex;
+  width: 200px;
+  gap: 20px;
+}
+
+.carrinho,
+.login {
   display: flex;
   align-items: center;
   gap: 10px;
+  height: 35px;
 }
 
 .carrinho {
   text-decoration: none;
   word-spacing: 3px;
-  margin-right: 20px;
-  padding: 10px 10px;
   font-size: 15px;
   font-weight: 500;
   border: none;
-  border-radius: 40px;
   color: black;
   background-color: transparent;
 }
@@ -41,11 +46,9 @@
 .login {
   text-decoration: none;
   word-spacing: 3px;
-  padding: 10px 20px;
   font-size: 15px;
   font-weight: 500;
   border: none;
-  border-radius: 5px;
   background-color: transparent;
   color: black;
 }
