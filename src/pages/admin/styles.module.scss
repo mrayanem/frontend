@@ -22,25 +22,12 @@
 }
 
 .table {
-  width: 100%;
   color: #535353;
-  border: 1px solid #58585897;
-  max-width: 800px;
-  margin-top: 20px;
-  border-spacing: 0;
-  border-radius: 5px;
-}
-
-.thead {
-  display: flex;
-  border-radius: 5px 5px 0px 0px;
-  background-color: #86b6c6;
+  border-color: #58585897;
 }
 
 .th{
-  width: 120px;
-  text-align: start;
-  padding: 10px;
+  background-color: #86b6c6!important;
 }
 
 .tr{
