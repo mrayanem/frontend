@@ -1,8 +1,11 @@
 @import '../../styles/variables';
 
 .baseFooter {
+  width: 100%;
   height: 20vh;
   background-color:$darkBlue1;
+  bottom: 0;
+  position: relative;
 }
 
 .detailFooter a {
