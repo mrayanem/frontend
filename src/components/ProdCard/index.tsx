@@ -10,7 +10,7 @@ interface ProdCardProps extends InputHTMLAttributes<HTMLDivElement>{
 
 export function ProdCard({ imageUrl, title, subtitle}: ProdCardProps) {
   return (
-    <div className={styles.cardProduto}>
+    <div className={'p-3 rounded-3 ' + styles.cardProduto}>
       <div className={styles.imgProduto}>
         <img src={imageUrl} className={styles.imagem} />
       </div>

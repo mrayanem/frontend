@@ -1,13 +1,13 @@
 @import '../../styles/variables';
 
-.btnProduto {
-  text-decoration: none;
-  cursor: pointer;
-  border: none;
+.btnProduto{
   background-color: $blue2;
   color: white;
-  padding: 10px;
-  border-radius: 5px;
+}
+
+.btnProduto:hover,.btnProduto:active{
+  background-color: $mediumBlue1;
+  color: white;
 }
 
 .botao {

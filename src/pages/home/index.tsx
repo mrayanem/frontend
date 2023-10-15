@@ -1,7 +1,7 @@
+import { Footer } from "@components/Footer";
 import { HeaderClient } from "@components/HeaderClient";
 import { ProdCard } from "@components/ProdCard";
-import { Footer } from "@components/Footer";
-import { Clock, Phone, WhatsappLogo, EnvelopeSimple, MapPin } from "@phosphor-icons/react";
+import { Clock, EnvelopeSimple, MapPin, Phone, WhatsappLogo } from "@phosphor-icons/react";
 import styles from "./styles.module.scss";
 
 const Home: React.FC = () => {
@@ -20,7 +20,7 @@ const Home: React.FC = () => {
         <div className={styles.cardTitle}>
           <p> Produtos Recomendados</p>
         </div>
-        <div className={styles.cardContainer}>
+        <div className={styles.containerCard}>
           <ProdCard
             imageUrl="https://images.petz.com.br/fotos/1658420112702.jpg"
             title="Ração GoldeN, 1Kg"
