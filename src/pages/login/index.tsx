@@ -16,7 +16,9 @@ export default function Login() {
                 <h1>Crie sua conta</h1>
                 <h6>Necessitamos dos seus dados para prosseguir</h6>
                 <br/>
-                <button className='btn btn-outline-primary text-dark fw-bold rounded-4 p-3 col-4'>Entrar</button>
+                <a href="../../cadastro">
+                <button className='btn btn-outline-primary text-dark fw-bold rounded-4 p-3 col-5'>Cadastrar</button>
+                </a>
               </div>
 
 

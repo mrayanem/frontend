@@ -50,7 +50,9 @@ export default function Cadastro () {
             </div>
 
             <div className='row mt-4 justify-content-center'>
-              <button className='btn btn-outline-primary text-dark fw-bold rounded-4 p-3 col-4'>Cadastrar</button>
+              <a href="../../home" className='row mt-4 justify-content-center text-decoration-none'>
+                 <button className='btn btn-outline-primary text-dark fw-bold rounded-4 p-3 col-4'>Cadastrar</button>
+              </a>
             </div>
           </div>
 

@@ -17,7 +17,7 @@ export function HeaderClient() {
             <div className={styles.dropdownMenu}>
               <div className={styles.dropdownHeading}>CACHORRO</div>
               <div className={styles.dropdownLinks}>
-                <a href="#" className={styles.subLink}>
+                <a href="../../catalogo" className={styles.subLink}>
                   Alimentação
                 </a>
                 <a href="#" className={styles.subLink}>
@@ -40,13 +40,13 @@ export function HeaderClient() {
                 </a>
               </div>
             </div>
-            <a href="#" className={styles.contato}>
+            <a href="#contato" className={styles.contato}>
               Contato
             </a>
           </div>
         </div>
         <div className={styles.accLinks}>
-          <Link href={'/login'} className={styles.login}>
+          <Link href={"../../login"} className={styles.login}>
             <User size={20} weight="bold" /> Login
           </Link>
           <Link href={'/cadastro'} className={styles.carrinho}>
