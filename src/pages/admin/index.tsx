@@ -65,6 +65,14 @@ export default function HomeAdmin() {
   async function handleDelete(id: string) {
     await removeUser(id)
 
+    setId('')
+    setCep('')
+    setCpf('')
+    setEmail('')
+    setName('')
+    setSenha('')
+    setTelefone('')
+
     await getData()
   }
 
