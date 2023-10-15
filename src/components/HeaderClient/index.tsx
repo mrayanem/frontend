@@ -1,4 +1,5 @@
 import { ShoppingCartSimple, User } from "@phosphor-icons/react";
+import Link from "next/link";
 import styles from "./styles.module.scss";
 
 export function HeaderClient() {
@@ -6,9 +7,9 @@ export function HeaderClient() {
     <header>
       <nav className={styles.navClient}>
         <div>
-          <a href="#">
+          <Link href={'/home'} scroll={true}>
             <img src='/logo.svg' alt="Les Pattes" className={styles.logo} />
-          </a>
+          </Link>
         </div>
         <div className={styles.headerClient}>
           <div className={styles.dropdown}>
@@ -16,7 +17,7 @@ export function HeaderClient() {
             <div className={styles.dropdownMenu}>
               <div className={styles.dropdownHeading}>CACHORRO</div>
               <div className={styles.dropdownLinks}>
-                <a href="#" className={styles.subLink}>
+                <a href="../../catalogo" className={styles.subLink}>
                   Alimentação
                 </a>
                 <a href="#" className={styles.subLink}>
@@ -39,19 +40,19 @@ export function HeaderClient() {
                 </a>
               </div>
             </div>
-            <a href="#" className={styles.contato}>
+            <a href="#contato" className={styles.contato}>
               Contato
             </a>
           </div>
         </div>
         <div className={styles.accLinks}>
-          <a href="#" className={styles.login}>
+          <Link href={"../../login"} className={styles.login}>
             <User size={20} weight="bold" /> Login
-          </a>
-          <a href="#" className={styles.carrinho}>
+          </Link>
+          <Link href={'/cadastro'} className={styles.carrinho}>
             <ShoppingCartSimple size={20} weight="bold" />
             Carrinho
-          </a>
+          </Link>
         </div>
       </nav>
     </header>

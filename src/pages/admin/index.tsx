@@ -34,29 +34,34 @@ const HomeAdmin: React.FC = () => {
             <ButtonA type="submit" title="Salvar" />
           </form>
         </div>
-        <div>
-          <table className={styles.table}>
-            <thead className={styles.thead}>
-              <tr className={styles.tr}>
+        <div className="col-md-12 table-responsive mt-5">
+          <table className={'table table-bordered ' + styles.table}>
+            <thead className='rounded-4'>
+              <tr>
                 <th className={styles.th}>Id</th>
                 <th className={styles.th}>Nome</th>
                 <th className={styles.th}>CPF</th>
                 <th className={styles.th}>CEP</th>
                 <th className={styles.th}>Telefone</th>
                 <th className={styles.th}>Email</th>
+                <th className={styles.th}>Ações</th>
               </tr>
             </thead>
-            <tbody className={styles.tbody}>
-              <tr className={styles.tr}>
-                <td className={styles.td}>juj</td>
-                <td className={styles.td}>huh</td>
-                <td className={styles.td}>fdfg</td>
-                <td className={styles.td}>rt</td>
-                <td className={styles.td}>dfb</td>
-                <td className={styles.td}>ety6</td>
-                <td className={styles.td}>
-                  <PencilSimple size={20} weight="bold"></PencilSimple>
-                  <Trash size={20} weight="bold"></Trash>
+            <tbody>
+              <tr>
+                <td>juj</td>
+                <td>huh</td>
+                <td>fdfg</td>
+                <td>rt</td>
+                <td>dfb</td>
+                <td>ety6</td>
+                <td className="d-flex justify-content-center gap-3 border-start-0">
+                  <a href="#" className="border-0">
+                    <PencilSimple size={30} weight="bold" color="blue"></PencilSimple>
+                  </a>
+                  <a href="#" className="border-0">
+                    <Trash size={30} weight="bold" color="red"></Trash>
+                  </a>
                 </td>
               </tr>
             </tbody>

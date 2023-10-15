@@ -1,14 +1,10 @@
 @import '../../styles/variables';
 
-
 .baseFooter {
-  padding: 0px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   height: 20vh;
   background-color:$darkBlue1;
-  margin-top: 2%;
+  bottom: 0;
+  position: relative;
 }
 
 .detailFooter a {

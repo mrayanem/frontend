@@ -14,7 +14,9 @@ const Login: React.FC = () => {
                 <h1>Crie sua conta</h1>
                 <h6>Necessitamos dos seus dados para prosseguir</h6>
                 <br/>
-                <button className='btn btn-outline-primary text-dark fw-bold rounded-4 p-3 col-4'>Entrar</button>
+                <a href="../../cadastro">
+                <button className='btn btn-outline-primary text-dark fw-bold rounded-4 p-3 col-5'>Cadastrar</button>
+                </a>
               </div>
 
 
@@ -25,8 +27,9 @@ const Login: React.FC = () => {
                 <h6>Conecte-se novamente!</h6>
               </div>
               <div className='p-5'>
-                <div className='col-md-12 mt-3'>
-                  <Input placeholder='&#xf0e0;   cpf' />
+
+                <div className='col'>
+                  <Input placeholder='&#xf007;   cpf' />
                 </div>
 
                 <div className='col-md-12 mt-3'>
@@ -34,7 +37,7 @@ const Login: React.FC = () => {
                 </div>
 
                 <div className='col-md-12 mt-3'>
-                  <Input placeholder='&#xf0e0;   senha' />
+                  <Input placeholder='&#xf023;   senha' />
                 </div>
 
                 <div className='col-md-12 text-center mt-3'>
@@ -42,7 +45,9 @@ const Login: React.FC = () => {
                 </div>
 
                 <div className='row mt-5 justify-content-center'>
-                  <button className='btn btn-outline-primary text-dark fw-bold rounded-4 p-3 col-4'>Entrar</button>
+                  <a href="../../home">
+                    <button className='btn btn-outline-primary text-dark fw-bold rounded-4 p-3 col-4'>Entrar</button>
+                  </a>
                 </div>
               </div>
             </div>

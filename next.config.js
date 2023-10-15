@@ -3,6 +3,15 @@
 require('dotenv').config();
 
 const nextConfig = {
+    async redirects() {
+      return [
+        {
+          source: '/',
+          destination: '/home',
+          permanent: true,
+        },
+      ]
+    },
     experimental: {
       forceSwcTransforms: true,
     },
@@ -14,8 +23,8 @@ const nextConfig = {
           value: 'no-store',
         },
       ],
-    },
-  ],
+    }
+  ]
 }
 
 module.exports = nextConfig

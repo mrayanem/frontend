@@ -1,9 +1,18 @@
-.cardContainer {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+@import '../../styles/variables';
+
+.containerCard {
+  @media screen and (min-width: 728px) {
+    grid-template-columns:  repeat(3, minmax(0, 1fr));
+  }
+
+  @media screen and (min-width: 1024px) {
+    grid-template-columns:  repeat(3, minmax(0, 1fr));
+  }
+
+  display: grid;
+  gap: 3rem;
+  padding: 2.5rem 3rem 5rem 3rem;
   justify-content: center;
-  margin-bottom: 2%;
 }
 
 .cardTitle {
@@ -28,21 +37,34 @@
 
 .mainText {
   position: relative;
-
-  width: 30vw;
-  font-size: 38px;
+  width: 23vw;
+  text-align: left;
+  margin: 5%;
+  margin-top: 10%;
+  h1{
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  p{
+    font-size: 1rem;
+    color: var($gray5);
+  }
 }
 
-//.mainFoto {}
+.mainFoto {
+  width: 45%;
+  position: absolute;
+  right: 12%;
+  bottom: -4rem;
+}
 
 .contato {
   display: flex;
-  height: 30vh;
-  background-color: #f5f5f5;
-  gap: 20%;
-  padding: 10% 3%;
-  align-items: center;
-  justify-content: center;
+  height: auto;
+  padding: 2.5rem;
+  background-color: #fdfafa;
+  margin-bottom: 4rem;
+  justify-content: space-around;
   font-size: 18px;
 }
 
@@ -52,25 +74,22 @@
 
 .Footer {
   width: 100vw;
-  height: 30vh;
 }
 
 .contatoText {
-  width: 30vw;
-  height: 30vh;
-}
-
-.contatoText p {
-  width: 28vw;
+  width: 31vw;
 }
 
 .btnContato {
-  margin-top: 3%;
   width: 50%;
   height: 20%;
   border-radius: 15px;
-  color: black;
+  border: none;
+  cursor: pointer;
+  color: #000;
+  background-color: #b7d9e2;
   word-spacing: 2px;
+  margin-top: 1rem;
 }
 
 .contatoInfo {
