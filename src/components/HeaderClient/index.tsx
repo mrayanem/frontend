@@ -1,4 +1,5 @@
 import { ShoppingCartSimple, User } from "@phosphor-icons/react";
+import Router from "next/router";
 import styles from "./styles.module.scss";
 
 export function HeaderClient() {
@@ -45,13 +46,13 @@ export function HeaderClient() {
           </div>
         </div>
         <div className={styles.accLinks}>
-          <a href="#" className={styles.login}>
+          <button onClick={() => Router.push('/login')} className={styles.login}>
             <User size={20} weight="bold" /> Login
-          </a>
-          <a href="#" className={styles.carrinho}>
+          </button>
+          <button onClick={() => Router.push('/cadastro')} className={styles.carrinho}>
             <ShoppingCartSimple size={20} weight="bold" />
             Carrinho
-          </a>
+          </button>
         </div>
       </nav>
     </header>
