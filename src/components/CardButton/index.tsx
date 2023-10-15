@@ -7,11 +7,9 @@ interface CardButtonProps extends InputHTMLAttributes<HTMLLinkElement>{
 export function CardButton({ url }: CardButtonProps) {
   return (
     <>
-      <div className={styles.botao}>
-        <a href={url} className={styles.btnProduto}>
+        <a href={url} className={'btn ' + styles.btnProduto}>
           Adicionar ao Carrinho
         </a>
-      </div>
     </>
   );
 }
