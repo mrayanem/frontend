@@ -1,9 +1,16 @@
-.cardContainer {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+.containerCard {
+  @media screen and (min-width: 728px) {
+    grid-template-columns:  repeat(3, minmax(0, 1fr));
+  }
+
+  @media screen and (min-width: 1024px) {
+    grid-template-columns:  repeat(3, minmax(0, 1fr));
+  }
+
+  display: grid;
+  gap: 3rem;
+  padding: 2.5rem 3rem 5rem 3rem;
   justify-content: center;
-  margin-bottom: 2%;
 }
 
 .cardTitle {
@@ -37,12 +44,11 @@
 
 .contato {
   display: flex;
-  height: 30vh;
+  height: auto;
   background-color: #f5f5f5;
-  gap: 20%;
-  padding: 10% 3%;
-  align-items: center;
-  justify-content: center;
+  padding: 2.5rem;
+  margin-bottom: 4rem;
+  justify-content: space-around;
   font-size: 18px;
 }
 
@@ -52,25 +58,19 @@
 
 .Footer {
   width: 100vw;
-  height: 30vh;
 }
 
 .contatoText {
-  width: 30vw;
-  height: 30vh;
-}
-
-.contatoText p {
-  width: 28vw;
+  width: 31vw;
 }
 
 .btnContato {
-  margin-top: 3%;
   width: 50%;
   height: 20%;
   border-radius: 15px;
   color: black;
   word-spacing: 2px;
+  margin-top: 1rem;
 }
 
 .contatoInfo {
