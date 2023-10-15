@@ -6,7 +6,8 @@ import { User } from 'models/User'
 import { useEffect, useState } from 'react'
 import {
   createUser,
-  getUsers
+  getUsers,
+  removeUser
 } from 'services/UserService'
 import styles from './styles.module.scss'
 
@@ -49,6 +50,12 @@ export default function HomeAdmin() {
 
   async function handleUpdate({ id, cep, cpf, email, name, password, telefone }: User) {
 
+  }
+
+  async function handleDelete(id: string) {
+    await removeUser(id)
+
+    await getData()
   }
 
 
