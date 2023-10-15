@@ -40,9 +40,6 @@ export default function HomeAdmin() {
     await getData()
   }
 
-  async function handleUpdate(id: string, data: Omit<User, 'id'>) {
-    await updateUser(id, data)
-
     await getData()
   }
 
@@ -60,6 +57,23 @@ export default function HomeAdmin() {
 
     await getData()
   }
+
+  async function handleUpdate(id: string) {
+    const user = {
+      cep,
+      cpf,
+      email,
+      name,
+      password: senha,
+      telefone
+    }
+    
+
+    await updateUser(user)
+
+    await getData()
+  }
+
 
   return (
     <>
@@ -101,7 +115,11 @@ export default function HomeAdmin() {
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
-            <ButtonA title="Salvar" onClick={() => handleCreate()} />
+            <ButtonA
+              type="button"
+              title="Salvar"
+              onClick={() => handleCreate()}
+            />
           </form>
         </div>
         <div className="col-md-12 table-responsive mt-5">

@@ -10,7 +10,7 @@ export async function getUsers() {
 }
 
 export const createUser = async (data: Omit<User, 'id'>) => {
-  const res = await http.post<User>(`/user`, data)
+  const res = await http.post<User>(`/users`, data)
 
   if (res.status === 200) {
     return res.data
