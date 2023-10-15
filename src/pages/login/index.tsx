@@ -28,6 +28,10 @@ const Login: React.FC = () => {
               </div>
               <div className='p-5'>
 
+                <div className='col'>
+                  <Input placeholder='&#xf007;   cpf' />
+                </div>
+
                 <div className='col-md-12 mt-3'>
                   <Input placeholder='&#xf0e0;   e-mail' />
                 </div>
