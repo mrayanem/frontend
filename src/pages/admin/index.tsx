@@ -47,6 +47,14 @@ export default function HomeAdmin() {
 
     id ? await updateUser(id, user) : await createUser(user);
 
+    setId('')
+    setCep('')
+    setCpf('')
+    setEmail('')
+    setName('')
+    setSenha('')
+    setTelefone('')
+
     await getData()
   }
 
