@@ -7,9 +7,9 @@ export function HeaderClient() {
     <header>
       <nav className={styles.navClient}>
         <div>
-          <a href="#">
+          <Link href={'/home'} scroll={true}>
             <img src='/logo.svg' alt="Les Pattes" className={styles.logo} />
-          </a>
+          </Link>
         </div>
         <div className={styles.headerClient}>
           <div className={styles.dropdown}>
