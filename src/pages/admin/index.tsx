@@ -4,25 +4,62 @@ import { InputT } from '@components/inputAdmin'
 import { PencilSimple, Trash } from '@phosphor-icons/react'
 import { User } from 'models/User'
 import { useEffect, useState } from 'react'
-import { getUsers } from 'services/UserService'
+import {
+  createUser,
+  getUsers,
+  removeUser,
+  updateUser
+} from 'services/UserService'
 import styles from './styles.module.scss'
 
 export default function HomeAdmin() {
   const [users, setUsers] = useState<User[]>([])
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [cpf, setCpf] = useState('')
+  const [cep, setCep] = useState('')
+  const [telefone, setTelefone] = useState('')
+  const [senha, setSenha] = useState('')
 
   async function getData() {
     const res = await getUsers()
 
     console.log(res)
 
-    if(res){
+    if (res) {
       setUsers(res)
     }
-
   }
   useEffect(() => {
     getData()
   }, [])
+
+  async function handleDelete(id: string) {
+    await removeUser(id)
+
+    await getData()
+  }
+
+  async function handleUpdate(id: string, data: Omit<User, 'id'>) {
+    await updateUser(id, data)
+
+    await getData()
+  }
+
+  async function handleCreate() {
+    const user = {
+      cep,
+      cpf,
+      email,
+      name,
+      password: senha,
+      telefone
+    }
+
+    await createUser(user)
+
+    await getData()
+  }
 
   return (
     <>
@@ -33,18 +70,43 @@ export default function HomeAdmin() {
           <form>
             <span> Informações</span>
             <div className={styles.formInputs}>
-              <InputT type="text" name="nome" title="Nome" />
-              <InputT type="text" name="cpf" title="CPF" />
-              <InputT type="text" name="cep" title="CEP" />
-              <InputT type="text" name="telefone" title="Telefone" />
-              <InputT type="email" name="email" title="Email" />
+              <InputT
+                type="text"
+                name="nome"
+                title="Nome"
+                onChange={(e) => setName(e.target.value)}
+              />
+              <InputT
+                type="text"
+                name="cpf"
+                title="CPF"
+                onChange={(e) => setCpf(e.target.value)}
+              />
+              <InputT
+                type="text"
+                name="cep"
+                title="CEP"
+                onChange={(e) => setCep(e.target.value)}
+              />
+              <InputT
+                type="text"
+                name="telefone"
+                title="Telefone"
+                onChange={(e) => setTelefone(e.target.value)}
+              />
+              <InputT
+                type="email"
+                name="email"
+                title="Email"
+                onChange={(e) => setEmail(e.target.value)}
+              />
             </div>
-            <ButtonA type="submit" title="Salvar" />
+            <ButtonA title="Salvar" onClick={() => handleCreate()} />
           </form>
         </div>
         <div className="col-md-12 table-responsive mt-5">
           <table className={'table table-bordered ' + styles.table}>
-            <thead className='rounded-4'>
+            <thead className="rounded-4">
               <tr>
                 <th className={styles.th}>Id</th>
                 <th className={styles.th}>Nome</th>
@@ -56,22 +118,29 @@ export default function HomeAdmin() {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>juj</td>
-                <td>huh</td>
-                <td>fdfg</td>
-                <td>rt</td>
-                <td>dfb</td>
-                <td>ety6</td>
-                <td className="d-flex justify-content-center gap-3 border-start-0">
-                  <a href="#" className="border-0">
-                    <PencilSimple size={30} weight="bold" color="blue"></PencilSimple>
-                  </a>
-                  <a href="#" className="border-0">
-                    <Trash size={30} weight="bold" color="red"></Trash>
-                  </a>
-                </td>
-              </tr>
+              {users.map((user) => (
+                <tr>
+                  <td>{user.id}</td>
+                  <td>{user.name}</td>
+                  <td>{user.cpf}</td>
+                  <td>{user.cep}</td>
+                  <td>{user.telefone}</td>
+                  <td>{user.email}</td>
+                  <td className="d-flex justify-content-center gap-3 border-start-0">
+                    <button
+                      style={{ background: 'transparent', border: 'none' }}
+                    >
+                      <PencilSimple size={30} weight="bold" color="#86b6c6" />
+                    </button>
+                    <button
+                      style={{ background: 'transparent', border: 'none' }}
+                      onClick={() => handleDelete(user.id)}
+                    >
+                      <Trash size={30} weight="bold" color="#dc2626" />
+                    </button>
+                  </td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>

@@ -1,10 +1,14 @@
-import { InputHTMLAttributes } from "react";
-import styles from './styles.module.scss';
+import { InputHTMLAttributes } from 'react'
+import styles from './styles.module.scss'
 
-interface ButtonProps extends InputHTMLAttributes<HTMLButtonElement>{
-  title: string;
+interface ButtonProps extends InputHTMLAttributes<HTMLButtonElement> {
+  title: string
 }
 
-export function ButtonA({ title } : ButtonProps) {
-  return <button className={styles.ButtonA}>{title}</button>;
+export function ButtonA({ title }: ButtonProps) {
+  return (
+    <button type="button" className={styles.ButtonA}>
+      {title}
+    </button>
+  )
 }
