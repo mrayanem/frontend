@@ -1,9 +1,9 @@
-import { InputHTMLAttributes } from "react";
+import { ButtonHTMLAttributes } from "react";
 
-interface ButtonProps extends InputHTMLAttributes<HTMLButtonElement>{
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
   title: string;
 }
 
-export function Button({ title } : ButtonProps) {
-  return <button>{title}</button>;
+export function Button({ title, ...restProps } : ButtonProps) {
+  return <button {...restProps}>{title}</button>;
 }
