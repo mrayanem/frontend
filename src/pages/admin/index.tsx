@@ -6,9 +6,7 @@ import { User } from 'models/User'
 import { useEffect, useState } from 'react'
 import {
   createUser,
-  getUsers,
-  removeUser,
-  updateUser
+  getUsers
 } from 'services/UserService'
 import styles from './styles.module.scss'
 
@@ -34,15 +32,6 @@ export default function HomeAdmin() {
     getData()
   }, [])
 
-  async function handleDelete(id: string) {
-    await removeUser(id)
-
-    await getData()
-  }
-
-    await getData()
-  }
-
   async function handleCreate() {
     const user = {
       cep,
@@ -58,20 +47,8 @@ export default function HomeAdmin() {
     await getData()
   }
 
-  async function handleUpdate(id: string) {
-    const user = {
-      cep,
-      cpf,
-      email,
-      name,
-      password: senha,
-      telefone
-    }
-    
+  async function handleUpdate({ id, cep, cpf, email, name, password, telefone }: User) {
 
-    await updateUser(user)
-
-    await getData()
   }
 
 
