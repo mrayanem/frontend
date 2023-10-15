@@ -16,7 +16,7 @@ export function Footer({ }: FooterProps) {
             <img src='/logo.svg' alt="Les Pattes" className={'align-items-center' + styles.logo} />
           </a>
           <div className={styles.detailFooter}>
-            <a href="#">Sobre Nós</a>
+            <a href="../../sobrenos">Sobre Nós</a>
           </div>
         </div>
       </footer>
