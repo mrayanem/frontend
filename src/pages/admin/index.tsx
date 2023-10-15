@@ -7,7 +7,8 @@ import { useEffect, useState } from 'react'
 import {
   createUser,
   getUsers,
-  removeUser
+  removeUser,
+  updateUser
 } from 'services/UserService'
 import styles from './styles.module.scss'
 
@@ -34,7 +35,7 @@ export default function HomeAdmin() {
     getData()
   }, [])
 
-  async function handleCreate() {
+  async function handleSave() {
     const user = {
       cep,
       cpf,
@@ -44,7 +45,7 @@ export default function HomeAdmin() {
       telefone
     }
 
-    await createUser(user)
+    id ? await updateUser(id, user) : await createUser(user);
 
     await getData()
   }
@@ -116,7 +117,7 @@ export default function HomeAdmin() {
             <ButtonA
               type="button"
               title="Salvar"
-              onClick={() => handleCreate()}
+              onClick={() => handleSave()}
             />
           </form>
         </div>
