@@ -44,7 +44,7 @@ export default function Login() {
                 <div className='col-md-12 mt-3'>
                   <Input
                     {...register('password')}
-                    placeholder='&#xf0e0;   senha'
+                    placeholder='&#xf023;   senha'
                     id="password"
                     name="password"
                     type="password"
@@ -58,8 +58,10 @@ export default function Login() {
                 </div>
 
                 <div className='row mt-5 justify-content-center'>
-                  <button type="submit" className='btn btn-outline-primary text-dark fw-bold rounded-4 p-3 col-4'>Entrar</button>
-                </div>
+                  <a href='../../home' className='row mt-5 justify-content-center text-decoration-none'>
+                    <button type="submit" className='btn btn-outline-primary text-dark fw-bold rounded-4 p-3 col-4'>Entrar</button>
+                  </a>
+                  </div>
               </div>
             </div>
             </div>
