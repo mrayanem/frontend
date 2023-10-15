@@ -13,6 +13,7 @@ import styles from './styles.module.scss'
 
 export default function HomeAdmin() {
   const [users, setUsers] = useState<User[]>([])
+  const [id, setId] = useState('')
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [cpf, setCpf] = useState('')
@@ -50,6 +51,14 @@ export default function HomeAdmin() {
 
   async function handleUpdate({ id, cep, cpf, email, name, password, telefone }: User) {
 
+    setId(id)
+    setCep(cep)
+    setCpf(cpf)
+    setEmail(email)
+    setName(name)
+    setSenha(password)
+    setTelefone(telefone)
+
   }
 
   async function handleDelete(id: string) {
@@ -72,30 +81,35 @@ export default function HomeAdmin() {
                 type="text"
                 name="nome"
                 title="Nome"
+                value={name}
                 onChange={(e) => setName(e.target.value)}
               />
               <InputT
                 type="text"
                 name="cpf"
                 title="CPF"
+                value={cpf}
                 onChange={(e) => setCpf(e.target.value)}
               />
               <InputT
                 type="text"
                 name="cep"
                 title="CEP"
+                value={cep}
                 onChange={(e) => setCep(e.target.value)}
               />
               <InputT
                 type="text"
                 name="telefone"
                 title="Telefone"
+                value={telefone}
                 onChange={(e) => setTelefone(e.target.value)}
               />
               <InputT
                 type="email"
                 name="email"
                 title="Email"
+                value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
@@ -131,8 +145,9 @@ export default function HomeAdmin() {
                   <td className="d-flex justify-content-center gap-3 border-start-0">
                     <button
                       style={{ background: 'transparent', border: 'none' }}
+                      onClick={() => handleUpdate(user)}
                     >
-                      <PencilSimple size={30} weight="bold" color="#86b6c6" />
+                      <PencilSimple size={30} weight="bold" color="#86b6c6"/>
                     </button>
                     <button
                       style={{ background: 'transparent', border: 'none' }}
