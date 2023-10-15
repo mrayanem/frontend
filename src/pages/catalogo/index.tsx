@@ -4,7 +4,7 @@ import { ProdCard } from "@components/ProdCard";
 import { CaretRight } from "@phosphor-icons/react";
 import styles from './styles.module.scss';
 
-const Catalogo: React.FC = () =>{
+export default function Catalogo(){
   return (
     <>
       <HeaderClient />
@@ -59,5 +59,3 @@ const Catalogo: React.FC = () =>{
     </>
   );
 }
-
-export default Catalogo

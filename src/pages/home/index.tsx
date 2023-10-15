@@ -4,7 +4,7 @@ import { ProdCard } from "@components/ProdCard";
 import { Clock, EnvelopeSimple, MapPin, Phone, WhatsappLogo } from "@phosphor-icons/react";
 import styles from "./styles.module.scss";
 
-const Home: React.FC = () => {
+export default function Home(){
   return (
     <>
       <HeaderClient />
@@ -75,5 +75,3 @@ const Home: React.FC = () => {
     </>
   );
 }
-
-export default Home

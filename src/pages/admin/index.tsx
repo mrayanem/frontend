@@ -4,7 +4,7 @@ import { InputT } from "@components/inputAdmin";
 import { PencilSimple, Trash } from "@phosphor-icons/react";
 import styles from "./styles.module.scss";
 
-const HomeAdmin: React.FC = () => {
+export default function HomeAdmin () {
   return (
     <>
       <HeaderAdmin />
@@ -60,5 +60,3 @@ const HomeAdmin: React.FC = () => {
     </>
   );
 }
-
-export default HomeAdmin

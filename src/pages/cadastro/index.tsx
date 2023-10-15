@@ -1,8 +1,7 @@
 import { Input } from '@components/Input'
-import React from 'react'
 import styles from './styles.module.scss'
 
-const Cadastro: React.FC = () => {
+export default function Cadastro () {
   return (
     <>
     <div className={'h-100 d-flex justify-content-center align-items-center ' + styles.container}>
@@ -61,6 +60,3 @@ const Cadastro: React.FC = () => {
     </>
   )
 }
-
-
-export default Cadastro

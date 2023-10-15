@@ -1,8 +1,10 @@
-import { Input } from '@components/Input'
-import React from 'react'
-import styles from './styles.module.scss'
+import { Input } from '@components/Input';
+import { useForm } from 'react-hook-form';
+import styles from './styles.module.scss';
 
-const Login: React.FC = () => {
+export default function Login() {
+  const { register, handleSubmit } = useForm();
+
   return (
     <>
     <div className={'h-100 d-flex justify-content-center align-items-center ' + styles.container}>
@@ -24,17 +26,29 @@ const Login: React.FC = () => {
                 <h1>Boas-vindas de volta </h1>
                 <h6>Conecte-se novamente!</h6>
               </div>
-              <div className='p-5'>
+              <div className='p-4'>
                 <div className='col-md-12 mt-3'>
-                  <Input placeholder='&#xf0e0;   cpf' />
+                  <Input
+                    {...register('email')}
+                    placeholder="&#xf0e0;   e-mail"
+                    id="email"
+                    name="email"
+                    type="email"
+                    autoComplete="email"
+                    required
+                  />
                 </div>
 
                 <div className='col-md-12 mt-3'>
-                  <Input placeholder='&#xf0e0;   e-mail' />
-                </div>
-
-                <div className='col-md-12 mt-3'>
-                  <Input placeholder='&#xf0e0;   senha' />
+                  <Input
+                    {...register('password')}
+                    placeholder='&#xf0e0;   senha'
+                    id="password"
+                    name="password"
+                    type="password"
+                    autoComplete="current-password"
+                    required
+                  />
                 </div>
 
                 <div className='col-md-12 text-center mt-3'>
@@ -42,7 +56,7 @@ const Login: React.FC = () => {
                 </div>
 
                 <div className='row mt-5 justify-content-center'>
-                  <button className='btn btn-outline-primary text-dark fw-bold rounded-4 p-3 col-4'>Entrar</button>
+                  <button type="submit" className='btn btn-outline-primary text-dark fw-bold rounded-4 p-3 col-4'>Entrar</button>
                 </div>
               </div>
             </div>
@@ -55,6 +69,3 @@ const Login: React.FC = () => {
     </>
   )
 }
-
-
-export default Login

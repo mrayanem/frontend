@@ -1,8 +1,8 @@
-import styles from "./styles.module.scss";
-import { HeaderClient } from "@components/HeaderClient";
 import { Footer } from "@components/Footer";
+import { HeaderClient } from "@components/HeaderClient";
+import styles from "./styles.module.scss";
 
-const Privacidade: React.FC = () => {
+export default function Privacidade() {
   return (
     <>
  <HeaderClient />
@@ -255,5 +255,3 @@ const Privacidade: React.FC = () => {
     </>
   );
 }
-
-export default Privacidade
