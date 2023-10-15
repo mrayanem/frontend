@@ -8,7 +8,7 @@ export function Footer({ }: FooterProps) {
   return (
     <>
       <footer>
-        <div className={styles.baseFooter}>
+        <div className={'d-flex justify-content-around align-items-center ' + styles.baseFooter}>
           <div className={styles.detailFooter}>
             <a href="#">Política de Privacidade</a>
           </div>
