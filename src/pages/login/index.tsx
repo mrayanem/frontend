@@ -25,16 +25,13 @@ const Login: React.FC = () => {
                 <h6>Conecte-se novamente!</h6>
               </div>
               <div className='p-5'>
-                <div className='col-md-12 mt-3'>
-                  <Input placeholder='&#xf0e0;   cpf' />
-                </div>
 
                 <div className='col-md-12 mt-3'>
                   <Input placeholder='&#xf0e0;   e-mail' />
                 </div>
 
                 <div className='col-md-12 mt-3'>
-                  <Input placeholder='&#xf0e0;   senha' />
+                  <Input placeholder='&#xf023;   senha' />
                 </div>
 
                 <div className='col-md-12 text-center mt-3'>
