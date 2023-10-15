@@ -2,18 +2,26 @@ import { ButtonA } from '@components/ButtonAdmin'
 import { HeaderAdmin } from '@components/HeaderAdmin'
 import { InputT } from '@components/inputAdmin'
 import { PencilSimple, Trash } from '@phosphor-icons/react'
-import axios from 'axios'
+import { User } from 'models/User'
 import { useEffect, useState } from 'react'
+import { getUsers } from 'services/UserService'
 import styles from './styles.module.scss'
 
-const HomeAdmin: React.FC = () => {
-  const [users, setUsers] = useState([])
-  async function getUsers() {
-    const adminUsers = await axios.get('http://localhost:5555/users')
-    setUsers(adminUsers as any)
+export default function HomeAdmin() {
+  const [users, setUsers] = useState<User[]>([])
+
+  async function getData() {
+    const res = await getUsers()
+
+    console.log(res)
+
+    if(res){
+      setUsers(res)
+    }
+
   }
   useEffect(() => {
-    getUsers()
+    getData()
   }, [])
 
   return (
