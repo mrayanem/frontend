@@ -1,10 +1,21 @@
-import styles from "./styles.module.scss";
-import { HeaderAdmin } from "@components/HeaderAdmin";
-import { Trash, PencilSimple } from "@phosphor-icons/react";
-import { InputT } from "@components/inputAdmin";
-import { ButtonA } from "@components/ButtonAdmin";
+import styles from './styles.module.scss'
+import { HeaderAdmin } from '@components/HeaderAdmin'
+import { Trash, PencilSimple } from '@phosphor-icons/react'
+import { InputT } from '@components/inputAdmin'
+import { ButtonA } from '@components/ButtonAdmin'
+import { useEffect, useState } from 'react'
+import axios from 'axios'
 
 const HomeAdmin: React.FC = () => {
+  const [users, setUsers] = useState([])
+  async function getUsers() {
+    const adminUsers = await axios.get('http://localhost:5555/users')
+    setUsers(adminUsers as any)
+  }
+  useEffect(() => {
+    getUsers()
+  }, [])
+
   return (
     <>
       <HeaderAdmin />
@@ -53,7 +64,7 @@ const HomeAdmin: React.FC = () => {
         </div>
       </div>
     </>
-  );
+  )
 }
 
 export default HomeAdmin
