@@ -12,7 +12,7 @@ export function Footer({ }: FooterProps) {
           <div className={styles.detailFooter}>
             <a href="../../privacidade">Política de Privacidade</a>
           </div>
-          <a href="#">
+          <a href="../../loginAdmin">
             <img src='/logo.svg' alt="Les Pattes" className={'align-items-center' + styles.logo} />
           </a>
           <div className={styles.detailFooter}>

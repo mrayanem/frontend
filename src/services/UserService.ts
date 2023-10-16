@@ -18,10 +18,10 @@ export const createUser = async (data: Omit<User, 'id'>) => {
 }
 
 export const updateUser = async (id: string, data: Omit<User, 'id'>) => {
-  const res = await http.put<User>(`/user/${id}`, data)
+  const res = await http.patch<User>(`/users/${id}`, data)
 
   if (res.status === 200) {
-    return res.data
+    return
   }
 }
 

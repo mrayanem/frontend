@@ -43,6 +43,9 @@ export function HeaderClient() {
             <a href="#contato" className={styles.contato}>
               Contato
             </a>
+            <a href="../../catalogo" className={styles.catalogo}>
+              Catalogo
+            </a>
           </div>
         </div>
         <div className={styles.accLinks}>
